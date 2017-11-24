@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>黑杰克</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #fff;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+
+
+<!--登陆组合代码-->
+<script type="text/javascript" src="http://cdn.haiguime.com/2017150/js/jquery.js"></script>
+<script type="text/javascript" src="http://cdn.haiguime.com/js/axios.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    sessionStorage.clear();
+    var loginAjax = "http://randomtest.haiguime.com/";
+    // var loginAjax = "http://192.168.1.37:8087/";
+    var platformType = "YLK";
+    var platformCode = "YLK";
+    var login = {
+        GetQueryString: function (name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        },
+        requestData: function () {
+            var gameId = login.GetQueryString("gameId");
+            var userToken = login.GetQueryString("userToken");
+            // var gameId = 1010;
+            // var userToken = '0f6c9467a9bc40599552665ffdaa45ed';
+            $.ajax({
+                type: "post",
+                url: loginAjax + "cloud2.activity.api/gamePlatform/insetGameRecordCount.do",
+                timeout: 30000,
+                dataType: "json",
+                data: {
+                    userToken: userToken,
+                    gameId: gameId
+                }, success: function (data) {
+                    console.log(data);
+                    sessionStorage.setItem("userId", data.data.uid);
+                    sessionStorage.setItem("activityId", data.data.activityId);
+                    var u = navigator.userAgent;
+                    var terminal;
+                    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+                    if (isAndroid) {
+                        terminal = 1;
+                    } else {
+                        terminal = 0;
+                    }
+                    $.ajax({
+                        type: "post",
+                        url: loginAjax + "cloud2.activity.api/h5game/backgroundCount/visitorPage",
+                        timeout: 30000,
+                        dataType: "json",
+                        data: {
+                            "userId": sessionStorage.getItem("userId"),
+                            "terminal": terminal,
+                            "gameId": gameId,
+                            "activityId": sessionStorage.getItem("activityId"),
+                            "pageId": 1
+                        }, success: function (data) {
+                            console.log(data);
+                            sessionStorage.setItem("vist_id", data.data.vist_id);
+                        }
+                    });
+                }
+            });
+            sessionStorage.setItem("loginUser", userToken);
+            sessionStorage.setItem("gameId", gameId);
+        },
+        getOwnInfo: function () {
+            $.ajax({
+                type: "post",
+                url: loginAjax + "cloud2.activity.api/h5game/userInfoGain/queryRankingBySurplusIntegral",
+                timeout: 3000,
+                dataType: "json",//数据类型为json
+                data: {
+                    userToken: sessionStorage.getItem("loginUser"),
+                    gameId: sessionStorage.getItem("gameId")
+                },
+                success: function (data) {
+                    console.log(data);
+                    sessionStorage.setItem("userImg", data.data.head_img_url);
+                    sessionStorage.setItem("userName", data.data.nickname);
+                },
+                error: function () {
+                }
+            });
+        },
+        share: function () {
+            let loginStr = sessionStorage.getItem("loginUser");
+            let gameId = sessionStorage.getItem("gameId");
+            $.ajax({
+                type: "post",
+                url: loginAjax + "cloud2.activity.api/h5game/h5Heap/heapGameShare.do",
+                timeout: 30000,
+                dataType: "json",
+                data: {
+                    "userToken": loginStr,
+                    "gameId": gameId,
+                    "url": window.location.href
+                }, success: function (data) {
+                    console.log(data);
+                    wx.config({
+                        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                        appId: data.data.appId, // 必填，公众号的唯一标识
+                        timestamp: data.data.timestamp, // 必填，生成签名的时间戳
+                        nonceStr: data.data.nonceStr, // 必填，生成签名的随机串
+                        signature: data.data.signature,// 必填，签名，见附录1
+                        jsApiList: [
+                            'onMenuShareTimeline',
+                            'onMenuShareAppMessage',
+                            'onMenuShareQQ',
+                            'onMenuShareWeibo',
+                            'onMenuShareQZone'
+                        ]// 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                    });
+                }
+            });
+        }
+    }
+    login.requestData();
+    login.getOwnInfo();
+    login.share();
+</script>
+<script>
+    function count(num) {
+        // 从首页传入到管理后台
+        $.ajax({
+            type: "post",
+            url: loginAjax + "cloud2.activity.api/h5game/backgroundCount/userOptions",
+            timeout: 30000,
+            dataType: "json",
+            data: {
+                "vistId": sessionStorage.getItem("vist_id"),
+                "userId": sessionStorage.getItem("userId"),
+                "optType": num,
+                "pageId": 4,
+                "gameId": sessionStorage.getItem("gameId"),
+                "activityId": sessionStorage.getItem("activityId")
+            }, success: function (data) {
+                console.log(data);
+            }
+        });
+    }
+    sessionStorage.setItem("outGame", "start");
+    $(function () {
+        pushHistory();
+        var bool = false;
+        setTimeout(function () {
+            bool = true;
+        }, 1500);
+        window.addEventListener("popstate", function (e) {
+            var num;
+            if (sessionStorage.getItem("outGame") == "start") {
+                num = 3;
+            } else {
+                num = 2;
+            }
+            if (bool == true) {
+                switch (num) {
+                    case 2:
+                        count(6);
+                        break;
+                    case 3:
+                        count(7);
+                        break;
+                }
+                window.history.go(-2);
+            }
+            pushHistory();
+
+        }, false);
+    });
+    function pushHistory() {
+        var state = {
+            title: "title",
+            url: "#"
+        };
+        window.history.pushState(state, "title", "#");
+    }
+</script>
+</head>
+
+<body>
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main" data-orientation="portrait" data-scale-mode="fixedWidth" data-frame-rate="30"
+data-content-width="750" data-content-height="1206" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false"
+data-show-log="false" data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+</div>
+<script>
+    var loadScript = function (list, callback) {
+        var loaded = 0;
+        var loadNext = function () {
+            loadSingleScript(list[loaded], function () {
+                loaded++;
+                if (loaded >= list.length) {
+                    callback();
+                }
+                else {
+                    loadNext();
+                }
+            })
+        };
+        loadNext();
+    };
+
+    var loadSingleScript = function (src, callback) {
+        var s = document.createElement('script');
+        s.async = false;
+        s.src = src;
+        s.addEventListener('load', function () {
+            s.parentNode.removeChild(s);
+            s.removeEventListener('load', arguments.callee, false);
+            callback();
+        }, false);
+        document.body.appendChild(s);
+    };
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './manifest.json?v=' + Math.random(), true);
+    xhr.addEventListener("load", function () {
+        var manifest = JSON.parse(xhr.response);
+        var list = manifest.initial.concat(manifest.game);
+        loadScript(list, function () {
+            /**
+             * {
+             * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+             * "audioType": 0 //使用的音频类型，0:默认，2:web audio，3:audio
+             * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+             * "retina": //是否基于devicePixelRatio缩放画布
+             * }
+             **/
+            egret.runEgret({
+                renderMode: "canvas",
+                audioType: 0
+            });
+        });
+    });
+    xhr.send(null);
+</script>
+<script>
+    wx.ready(function () {
+        wx.onMenuShareAppMessage({
+            title: 'Heap小游戏', // 分享标题
+            desc: 'Heap小游戏', // 分享描述
+            link: loginAjax + 'xyx/platform/index.html',  // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://cdn.haiguime.com/heap/images/shareLogo.png', // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: 'Heap小游戏', // 分享标题
+            link: loginAjax + 'xyx/platform/index.html',  // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://cdn.haiguime.com/heap/images/shareLogo.png', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareQQ({
+            title: 'Heap小游戏', // 分享标题
+            desc: 'Heap小游戏', // 分享描述
+            link: loginAjax + 'xyx/platform/index.html',  // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://cdn.haiguime.com/heap/images/shareLogo.png', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareWeibo({
+            title: 'Heap小游戏', // 分享标题
+            desc: 'Heap小游戏', // 分享描述
+            link: loginAjax + 'xyx/platform/index.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://cdn.haiguime.com/heap/images/shareLogo.png', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareQZone({
+            title: 'Heap小游戏', // 分享标题
+            desc: 'Heap小游戏', // 分享描述
+            link: loginAjax + 'xyx/platform/index.html', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: 'http://cdn.haiguime.com/heap/images/shareLogo.png', // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

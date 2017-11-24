@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="GoodsUISkin" width="663" height="100" xmlns:e="http://ns.egret.com/eui">
+	<!--<e:Label text="排行榜" width="656" textAlign="center" verticalAlign="middle" textColor="0x4A4A4A" size="30"
+	             fontFamily="微软雅黑" />
+	-->
+	<e:List id="score" height="104" width="663" y="0">
+		<e:layout>
+			<e:VerticalLayout gap="6" />
+		</e:layout>
+	</e:List>
+	<e:Label text="排行" x="97" y="104" textColor="0x333333" size="30" fontFamily="微软雅黑" />
+	<e:Label text="头像" x="232" y="104" textColor="0x333333" size="30" fontFamily="微软雅黑" />
+	<e:Label text="昵称" x="366" y="104" textColor="0x333333" size="30" fontFamily="微软雅黑" />
+	<e:Label text="积分" x="499" y="104" textColor="0x333333" size="30" fontFamily="微软雅黑" />
+	<e:Scroller id="scrListGoods" height="630" width="663" x="0" y="200">
+		<e:viewport>
+			<e:List id="listGoods" height="630" width="663">
+				<e:layout>
+					<e:VerticalLayout gap="6" />
+				</e:layout>
+			</e:List>
+		</e:viewport>
+		<e:Skin></e:Skin>
+	</e:Scroller>
+</e:Skin>

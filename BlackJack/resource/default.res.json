@@ -1,0 +1,525 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,index_startGame_png,index_information_png,index_moreGame_png,background_png,index_title_png,diamond_png,startDiamond_fnt,startDiamond_png,game_background_png,100_png,1_png,10_png,20_png,50_png,game_music_png,game_help_png,baoxian_click_png,baoxian_normal_png,chips_png,clear_click_png,fapai_click_png,fapai_normal_png,fenpai_click_png,fenpai_normal_png,yaopai_normal_png,yaopai_click_png,tingpai_norma_png,tingpai_click_png,teach_text4_png,teach_text3_png,teach_text2_png,teach_text1_png,jaintou_1_png,jaintou_2_png,teach_cons_png,teach_show_png,head_icon_png,game_scoreBackground_png,d13_png,a1_png,a2_png,a3_png,a4_png,a5_png,a6_png,a7_png,a8_png,a9_png,a10_png,a11_png,a12_png,a13_png,b1_png,b2_png,b3_png,b4_png,b5_png,b6_png,b7_png,b8_png,b9_png,b10_png,b11_png,b12_png,b13_png,c1_png,c2_png,c3_png,c4_png,c5_png,c6_png,c7_png,c8_png,c9_png,c10_png,c11_png,c12_png,c13_png,d1_png,d2_png,d3_png,d4_png,d5_png,d6_png,d7_png,d8_png,d9_png,d10_png,d11_png,d12_png,close_png,infomationBackground_png,rankingTab_png,infoTab_png,gameCons_png,gameCons_fnt,consBackground_png,pokerBack_png,infoTab_nor_png,rankingTab_nor_png,helpBackground_png,gameHelpText_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "index_startGame_png",
+			"type": "image",
+			"url": "assets/Index/index_startGame.png"
+		},
+		{
+			"name": "index_information_png",
+			"type": "image",
+			"url": "assets/Index/index_information.png"
+		},
+		{
+			"name": "index_moreGame_png",
+			"type": "image",
+			"url": "assets/Index/index_moreGame.png"
+		},
+		{
+			"name": "background_png",
+			"type": "image",
+			"url": "assets/Index/background.png"
+		},
+		{
+			"name": "index_title_png",
+			"type": "image",
+			"url": "assets/Index/index_title.png"
+		},
+		{
+			"name": "diamond_png",
+			"type": "image",
+			"url": "assets/Index/diamond.png"
+		},
+		{
+			"name": "startDiamond_fnt",
+			"type": "font",
+			"url": "assets/Index/startDiamond.fnt"
+		},
+		{
+			"name": "startDiamond_png",
+			"type": "image",
+			"url": "assets/Index/startDiamond.png"
+		},
+		{
+			"name": "game_background_png",
+			"type": "image",
+			"url": "assets/Index/game_background.png"
+		},
+		{
+			"name": "100_png",
+			"type": "image",
+			"url": "assets/Game/100.png"
+		},
+		{
+			"name": "1_png",
+			"type": "image",
+			"url": "assets/Game/1.png"
+		},
+		{
+			"name": "10_png",
+			"type": "image",
+			"url": "assets/Game/10.png"
+		},
+		{
+			"name": "20_png",
+			"type": "image",
+			"url": "assets/Game/20.png"
+		},
+		{
+			"name": "50_png",
+			"type": "image",
+			"url": "assets/Game/50.png"
+		},
+		{
+			"name": "game_music_png",
+			"type": "image",
+			"url": "assets/Game/game_music.png"
+		},
+		{
+			"name": "game_help_png",
+			"type": "image",
+			"url": "assets/Game/game_help.png"
+		},
+		{
+			"name": "baoxian_click_png",
+			"type": "image",
+			"url": "assets/Game/baoxian_click.png"
+		},
+		{
+			"name": "baoxian_normal_png",
+			"type": "image",
+			"url": "assets/Game/baoxian_normal.png"
+		},
+		{
+			"name": "chips_png",
+			"type": "image",
+			"url": "assets/Game/chips.png"
+		},
+		{
+			"name": "clear_click_png",
+			"type": "image",
+			"url": "assets/Game/clear_click.png"
+		},
+		{
+			"name": "fapai_click_png",
+			"type": "image",
+			"url": "assets/Game/fapai_click.png"
+		},
+		{
+			"name": "fapai_normal_png",
+			"type": "image",
+			"url": "assets/Game/fapai_normal.png"
+		},
+		{
+			"name": "fenpai_click_png",
+			"type": "image",
+			"url": "assets/Game/fenpai_click.png"
+		},
+		{
+			"name": "fenpai_normal_png",
+			"type": "image",
+			"url": "assets/Game/fenpai_normal.png"
+		},
+		{
+			"name": "yaopai_normal_png",
+			"type": "image",
+			"url": "assets/Game/yaopai_normal.png"
+		},
+		{
+			"name": "yaopai_click_png",
+			"type": "image",
+			"url": "assets/Game/yaopai_click.png"
+		},
+		{
+			"name": "tingpai_norma_png",
+			"type": "image",
+			"url": "assets/Game/tingpai_norma.png"
+		},
+		{
+			"name": "tingpai_click_png",
+			"type": "image",
+			"url": "assets/Game/tingpai_click.png"
+		},
+		{
+			"name": "teach_text4_png",
+			"type": "image",
+			"url": "assets/Index/teach_text4.png"
+		},
+		{
+			"name": "teach_text3_png",
+			"type": "image",
+			"url": "assets/Index/teach_text3.png"
+		},
+		{
+			"name": "teach_text2_png",
+			"type": "image",
+			"url": "assets/Index/teach_text2.png"
+		},
+		{
+			"name": "teach_text1_png",
+			"type": "image",
+			"url": "assets/Index/teach_text1.png"
+		},
+		{
+			"name": "jaintou_1_png",
+			"type": "image",
+			"url": "assets/Index/jaintou_1.png"
+		},
+		{
+			"name": "jaintou_2_png",
+			"type": "image",
+			"url": "assets/Index/jaintou_2.png"
+		},
+		{
+			"name": "teach_cons_png",
+			"type": "image",
+			"url": "assets/Index/teach_cons.png"
+		},
+		{
+			"name": "teach_show_png",
+			"type": "image",
+			"url": "assets/Index/teach_show.png"
+		},
+		{
+			"name": "head_icon_png",
+			"type": "image",
+			"url": "assets/Game/head_icon.png"
+		},
+		{
+			"name": "game_scoreBackground_png",
+			"type": "image",
+			"url": "assets/Game/game_scoreBackground.png"
+		},
+		{
+			"name": "d13_png",
+			"type": "image",
+			"url": "assets/Poke/d13.png"
+		},
+		{
+			"name": "a1_png",
+			"type": "image",
+			"url": "assets/Poke/a1.png"
+		},
+		{
+			"name": "a2_png",
+			"type": "image",
+			"url": "assets/Poke/a2.png"
+		},
+		{
+			"name": "a3_png",
+			"type": "image",
+			"url": "assets/Poke/a3.png"
+		},
+		{
+			"name": "a4_png",
+			"type": "image",
+			"url": "assets/Poke/a4.png"
+		},
+		{
+			"name": "a5_png",
+			"type": "image",
+			"url": "assets/Poke/a5.png"
+		},
+		{
+			"name": "a6_png",
+			"type": "image",
+			"url": "assets/Poke/a6.png"
+		},
+		{
+			"name": "a7_png",
+			"type": "image",
+			"url": "assets/Poke/a7.png"
+		},
+		{
+			"name": "a8_png",
+			"type": "image",
+			"url": "assets/Poke/a8.png"
+		},
+		{
+			"name": "a9_png",
+			"type": "image",
+			"url": "assets/Poke/a9.png"
+		},
+		{
+			"name": "a10_png",
+			"type": "image",
+			"url": "assets/Poke/a10.png"
+		},
+		{
+			"name": "a11_png",
+			"type": "image",
+			"url": "assets/Poke/a11.png"
+		},
+		{
+			"name": "a12_png",
+			"type": "image",
+			"url": "assets/Poke/a12.png"
+		},
+		{
+			"name": "a13_png",
+			"type": "image",
+			"url": "assets/Poke/a13.png"
+		},
+		{
+			"name": "b1_png",
+			"type": "image",
+			"url": "assets/Poke/b1.png"
+		},
+		{
+			"name": "b2_png",
+			"type": "image",
+			"url": "assets/Poke/b2.png"
+		},
+		{
+			"name": "b3_png",
+			"type": "image",
+			"url": "assets/Poke/b3.png"
+		},
+		{
+			"name": "b4_png",
+			"type": "image",
+			"url": "assets/Poke/b4.png"
+		},
+		{
+			"name": "b5_png",
+			"type": "image",
+			"url": "assets/Poke/b5.png"
+		},
+		{
+			"name": "b6_png",
+			"type": "image",
+			"url": "assets/Poke/b6.png"
+		},
+		{
+			"name": "b7_png",
+			"type": "image",
+			"url": "assets/Poke/b7.png"
+		},
+		{
+			"name": "b8_png",
+			"type": "image",
+			"url": "assets/Poke/b8.png"
+		},
+		{
+			"name": "b9_png",
+			"type": "image",
+			"url": "assets/Poke/b9.png"
+		},
+		{
+			"name": "b10_png",
+			"type": "image",
+			"url": "assets/Poke/b10.png"
+		},
+		{
+			"name": "b11_png",
+			"type": "image",
+			"url": "assets/Poke/b11.png"
+		},
+		{
+			"name": "b12_png",
+			"type": "image",
+			"url": "assets/Poke/b12.png"
+		},
+		{
+			"name": "b13_png",
+			"type": "image",
+			"url": "assets/Poke/b13.png"
+		},
+		{
+			"name": "c1_png",
+			"type": "image",
+			"url": "assets/Poke/c1.png"
+		},
+		{
+			"name": "c2_png",
+			"type": "image",
+			"url": "assets/Poke/c2.png"
+		},
+		{
+			"name": "c3_png",
+			"type": "image",
+			"url": "assets/Poke/c3.png"
+		},
+		{
+			"name": "c4_png",
+			"type": "image",
+			"url": "assets/Poke/c4.png"
+		},
+		{
+			"name": "c5_png",
+			"type": "image",
+			"url": "assets/Poke/c5.png"
+		},
+		{
+			"name": "c6_png",
+			"type": "image",
+			"url": "assets/Poke/c6.png"
+		},
+		{
+			"name": "c7_png",
+			"type": "image",
+			"url": "assets/Poke/c7.png"
+		},
+		{
+			"name": "c8_png",
+			"type": "image",
+			"url": "assets/Poke/c8.png"
+		},
+		{
+			"name": "c9_png",
+			"type": "image",
+			"url": "assets/Poke/c9.png"
+		},
+		{
+			"name": "c10_png",
+			"type": "image",
+			"url": "assets/Poke/c10.png"
+		},
+		{
+			"name": "c11_png",
+			"type": "image",
+			"url": "assets/Poke/c11.png"
+		},
+		{
+			"name": "c12_png",
+			"type": "image",
+			"url": "assets/Poke/c12.png"
+		},
+		{
+			"name": "c13_png",
+			"type": "image",
+			"url": "assets/Poke/c13.png"
+		},
+		{
+			"name": "d1_png",
+			"type": "image",
+			"url": "assets/Poke/d1.png"
+		},
+		{
+			"name": "d2_png",
+			"type": "image",
+			"url": "assets/Poke/d2.png"
+		},
+		{
+			"name": "d3_png",
+			"type": "image",
+			"url": "assets/Poke/d3.png"
+		},
+		{
+			"name": "d4_png",
+			"type": "image",
+			"url": "assets/Poke/d4.png"
+		},
+		{
+			"name": "d5_png",
+			"type": "image",
+			"url": "assets/Poke/d5.png"
+		},
+		{
+			"name": "d6_png",
+			"type": "image",
+			"url": "assets/Poke/d6.png"
+		},
+		{
+			"name": "d7_png",
+			"type": "image",
+			"url": "assets/Poke/d7.png"
+		},
+		{
+			"name": "d8_png",
+			"type": "image",
+			"url": "assets/Poke/d8.png"
+		},
+		{
+			"name": "d9_png",
+			"type": "image",
+			"url": "assets/Poke/d9.png"
+		},
+		{
+			"name": "d10_png",
+			"type": "image",
+			"url": "assets/Poke/d10.png"
+		},
+		{
+			"name": "d11_png",
+			"type": "image",
+			"url": "assets/Poke/d11.png"
+		},
+		{
+			"name": "d12_png",
+			"type": "image",
+			"url": "assets/Poke/d12.png"
+		},
+		{
+			"name": "close_png",
+			"type": "image",
+			"url": "assets/Infomation/close.png"
+		},
+		{
+			"name": "infomationBackground_png",
+			"type": "image",
+			"url": "assets/Infomation/infomationBackground.png"
+		},
+		{
+			"name": "rankingTab_png",
+			"type": "image",
+			"url": "assets/Infomation/rankingTab.png"
+		},
+		{
+			"name": "infoTab_png",
+			"type": "image",
+			"url": "assets/Infomation/infoTab.png"
+		},
+		{
+			"name": "gameCons_png",
+			"type": "image",
+			"url": "assets/Game/gameCons.png"
+		},
+		{
+			"name": "gameCons_fnt",
+			"type": "font",
+			"url": "assets/Game/gameCons.fnt"
+		},
+		{
+			"name": "consBackground_png",
+			"type": "image",
+			"url": "assets/Game/consBackground.png"
+		},
+		{
+			"name": "pokerBack_png",
+			"type": "image",
+			"url": "assets/Game/pokerBack.png"
+		},
+		{
+			"name": "infoTab_nor_png",
+			"type": "image",
+			"url": "assets/Infomation/infoTab_nor.png"
+		},
+		{
+			"name": "rankingTab_nor_png",
+			"type": "image",
+			"url": "assets/Infomation/rankingTab_nor.png"
+		},
+		{
+			"name": "helpBackground_png",
+			"type": "image",
+			"url": "assets/Game/helpBackground.png"
+		},
+		{
+			"name": "gameHelpText_png",
+			"type": "image",
+			"url": "assets/Game/gameHelpText.png"
+		}
+	]
+}

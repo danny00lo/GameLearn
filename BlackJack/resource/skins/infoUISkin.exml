@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="InfoUISkin" width="598" height="902" xmlns:e="http://ns.egret.com/eui">
+	<!--<e:Label text="游戏说明" width="656" textAlign="center" verticalAlign="middle" textColor="0x4A4A4A" size="48"/>-->
+	<e:Scroller id="scrListInfo" height="780" width="598" x="0" y="100">
+		<e:viewport>
+			<e:List id="infoMation" height="780" width="598">
+				<e:layout>
+					<e:VerticalLayout gap="6" />
+				</e:layout>
+			</e:List>
+		</e:viewport>
+		<e:Skin>
+	</e:Skin>
+</e:Scroller>
+</e:Skin>

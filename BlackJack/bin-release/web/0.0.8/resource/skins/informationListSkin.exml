@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="infomationListSkin" width="598" height="1400" xmlns:e="http://ns.egret.com/eui">
+	<e:Label fontFamily="微软雅黑" text="{data.info}" x="30" y="0" size="30" width="538" textAlign="left" verticalAlign="middle" textColor="0xFFEDBD" lineSpacing="10"/>
+	<!--<e:Image height="1063" width="656" y="0" source="{data.info}" x="-5" />-->
+</e:Skin>

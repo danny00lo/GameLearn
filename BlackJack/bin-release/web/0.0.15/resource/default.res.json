@@ -1,0 +1,185 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,index_startGame_png,index_information_png,index_moreGame_png,background_png,index_title_png,diamond_png,startDiamond_fnt,startDiamond_png,game_background_png,100_png,1_png,10_png,20_png,50_png,game_music_png,game_help_png,baoxian_click_png,baoxian_normal_png,chips_png,clear_click_png,fapai_click_png,fapai_normal_png,fenpai_click_png,fenpai_normal_png,yaopai_normal_png,yaopai_click_png,tingpai_norma_png,tingpai_click_png,teach_text4_png,teach_text3_png,teach_text2_png,teach_text1_png,jaintou_1_png,jaintou_2_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "index_startGame_png",
+			"type": "image",
+			"url": "assets/Index/index_startGame.png"
+		},
+		{
+			"name": "index_information_png",
+			"type": "image",
+			"url": "assets/Index/index_information.png"
+		},
+		{
+			"name": "index_moreGame_png",
+			"type": "image",
+			"url": "assets/Index/index_moreGame.png"
+		},
+		{
+			"name": "background_png",
+			"type": "image",
+			"url": "assets/Index/background.png"
+		},
+		{
+			"name": "index_title_png",
+			"type": "image",
+			"url": "assets/Index/index_title.png"
+		},
+		{
+			"name": "diamond_png",
+			"type": "image",
+			"url": "assets/Index/diamond.png"
+		},
+		{
+			"name": "startDiamond_fnt",
+			"type": "font",
+			"url": "assets/Index/startDiamond.fnt"
+		},
+		{
+			"name": "startDiamond_png",
+			"type": "image",
+			"url": "assets/Index/startDiamond.png"
+		},
+		{
+			"name": "game_background_png",
+			"type": "image",
+			"url": "assets/Index/game_background.png"
+		},
+		{
+			"name": "100_png",
+			"type": "image",
+			"url": "assets/Game/100.png"
+		},
+		{
+			"name": "1_png",
+			"type": "image",
+			"url": "assets/Game/1.png"
+		},
+		{
+			"name": "10_png",
+			"type": "image",
+			"url": "assets/Game/10.png"
+		},
+		{
+			"name": "20_png",
+			"type": "image",
+			"url": "assets/Game/20.png"
+		},
+		{
+			"name": "50_png",
+			"type": "image",
+			"url": "assets/Game/50.png"
+		},
+		{
+			"name": "game_music_png",
+			"type": "image",
+			"url": "assets/Game/game_music.png"
+		},
+		{
+			"name": "game_help_png",
+			"type": "image",
+			"url": "assets/Game/game_help.png"
+		},
+		{
+			"name": "baoxian_click_png",
+			"type": "image",
+			"url": "assets/Game/baoxian_click.png"
+		},
+		{
+			"name": "baoxian_normal_png",
+			"type": "image",
+			"url": "assets/Game/baoxian_normal.png"
+		},
+		{
+			"name": "chips_png",
+			"type": "image",
+			"url": "assets/Game/chips.png"
+		},
+		{
+			"name": "clear_click_png",
+			"type": "image",
+			"url": "assets/Game/clear_click.png"
+		},
+		{
+			"name": "fapai_click_png",
+			"type": "image",
+			"url": "assets/Game/fapai_click.png"
+		},
+		{
+			"name": "fapai_normal_png",
+			"type": "image",
+			"url": "assets/Game/fapai_normal.png"
+		},
+		{
+			"name": "fenpai_click_png",
+			"type": "image",
+			"url": "assets/Game/fenpai_click.png"
+		},
+		{
+			"name": "fenpai_normal_png",
+			"type": "image",
+			"url": "assets/Game/fenpai_normal.png"
+		},
+		{
+			"name": "yaopai_normal_png",
+			"type": "image",
+			"url": "assets/Game/yaopai_normal.png"
+		},
+		{
+			"name": "yaopai_click_png",
+			"type": "image",
+			"url": "assets/Game/yaopai_click.png"
+		},
+		{
+			"name": "tingpai_norma_png",
+			"type": "image",
+			"url": "assets/Game/tingpai_norma.png"
+		},
+		{
+			"name": "tingpai_click_png",
+			"type": "image",
+			"url": "assets/Game/tingpai_click.png"
+		},
+		{
+			"name": "teach_text4_png",
+			"type": "image",
+			"url": "assets/Index/teach_text4.png"
+		},
+		{
+			"name": "teach_text3_png",
+			"type": "image",
+			"url": "assets/Index/teach_text3.png"
+		},
+		{
+			"name": "teach_text2_png",
+			"type": "image",
+			"url": "assets/Index/teach_text2.png"
+		},
+		{
+			"name": "teach_text1_png",
+			"type": "image",
+			"url": "assets/Index/teach_text1.png"
+		},
+		{
+			"name": "jaintou_1_png",
+			"type": "image",
+			"url": "assets/Index/jaintou_1.png"
+		},
+		{
+			"name": "jaintou_2_png",
+			"type": "image",
+			"url": "assets/Index/jaintou_2.png"
+		}
+	]
+}

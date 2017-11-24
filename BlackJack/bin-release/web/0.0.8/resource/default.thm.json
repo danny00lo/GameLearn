@@ -1,0 +1,22 @@
+{
+  "skins": {},
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    {
+      "path": "resource/skins/infoUISkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"InfoUISkin\" width=\"598\" height=\"902\" xmlns:e=\"http://ns.egret.com/eui\">\n\t<!--<e:Label text=\"游戏说明\" width=\"656\" textAlign=\"center\" verticalAlign=\"middle\" textColor=\"0x4A4A4A\" size=\"48\"/>-->\n\t<e:Scroller id=\"scrListInfo\" height=\"780\" width=\"598\" x=\"0\" y=\"100\">\n\t\t<e:viewport>\n\t\t\t<e:List id=\"infoMation\" height=\"780\" width=\"598\">\n\t\t\t\t<e:layout>\n\t\t\t\t\t<e:VerticalLayout gap=\"6\" />\n\t\t\t\t</e:layout>\n\t\t\t</e:List>\n\t\t</e:viewport>\n\t\t<e:Skin>\n\t</e:Skin>\n</e:Scroller>\n</e:Skin>"
+    },
+    {
+      "path": "resource/skins/informationListSkin.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"infomationListSkin\" width=\"598\" height=\"1400\" xmlns:e=\"http://ns.egret.com/eui\">\n\t<e:Label fontFamily=\"微软雅黑\" text=\"{data.info}\" x=\"30\" y=\"0\" size=\"30\" width=\"538\" textAlign=\"left\" verticalAlign=\"middle\" textColor=\"0xFFEDBD\" lineSpacing=\"10\"/>\n\t<!--<e:Image height=\"1063\" width=\"656\" y=\"0\" source=\"{data.info}\" x=\"-5\" />-->\n</e:Skin>"
+    },
+    {
+      "path": "resource/skins/ranking.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"GoodsUISkin\" width=\"663\" height=\"100\" xmlns:e=\"http://ns.egret.com/eui\">\n\t<!--<e:Label text=\"排行榜\" width=\"656\" textAlign=\"center\" verticalAlign=\"middle\" textColor=\"0x4A4A4A\" size=\"30\"\n\t             fontFamily=\"微软雅黑\" />\n\t-->\n\t<e:List id=\"score\" height=\"104\" width=\"663\" y=\"0\">\n\t\t<e:layout>\n\t\t\t<e:VerticalLayout gap=\"6\" />\n\t\t</e:layout>\n\t</e:List>\n\t<e:Label text=\"排行\" x=\"97\" y=\"104\" textColor=\"0x333333\" size=\"30\" fontFamily=\"微软雅黑\" />\n\t<e:Label text=\"头像\" x=\"232\" y=\"104\" textColor=\"0x333333\" size=\"30\" fontFamily=\"微软雅黑\" />\n\t<e:Label text=\"昵称\" x=\"366\" y=\"104\" textColor=\"0x333333\" size=\"30\" fontFamily=\"微软雅黑\" />\n\t<e:Label text=\"积分\" x=\"499\" y=\"104\" textColor=\"0x333333\" size=\"30\" fontFamily=\"微软雅黑\" />\n\t<e:Scroller id=\"scrListGoods\" height=\"630\" width=\"663\" x=\"0\" y=\"200\">\n\t\t<e:viewport>\n\t\t\t<e:List id=\"listGoods\" height=\"630\" width=\"663\">\n\t\t\t\t<e:layout>\n\t\t\t\t\t<e:VerticalLayout gap=\"6\" />\n\t\t\t\t</e:layout>\n\t\t\t</e:List>\n\t\t</e:viewport>\n\t\t<e:Skin></e:Skin>\n\t</e:Scroller>\n</e:Skin>"
+    },
+    {
+      "path": "resource/skins/rankingList.exml",
+      "content": "<?xml version='1.0' encoding='utf-8'?>\n<e:Skin class=\"goodsListIRSkin\" width=\"656\" height=\"122\" xmlns:e=\"http://ns.egret.com/eui\">\n\t<e:Image height=\"100%\" width=\"100%\" x=\"0\" y=\"0\" source=\"{data.hope}\"/>\n\t<e:Label fontFamily=\"微软雅黑\" text=\"{data.goodsName}\" x=\"326\" y=\"0\" size=\"30\" width=\"160\" textAlign=\"center\"\n\t         verticalAlign=\"middle\" textColor=\"{data.realColor}\" height=\"122\" strokeColor=\"{data.color}\" stroke=\"{data.size}\" />\n\t<e:Label fontFamily=\"微软雅黑\" y=\"0\" text=\"{data.comment}\" textAlign=\"left\" width=\"220\" size=\"30\" verticalAlign=\"middle\"\n\t         x=\"515\" textColor=\"{data.realColor}\" height=\"122\" strokeColor=\"{data.color}\" stroke=\"{data.size}\" />\n\t<e:Label fontFamily=\"微软雅黑\" y=\"0\" text=\"{data.rank}\" width=\"220\" size=\"30\" x=\"95\" textColor=\"{data.realColor}\" height=\"122\"\n\t         textAlign=\"left\" verticalAlign=\"middle\" strokeColor=\"{data.color}\" stroke=\"{data.size}\" />\n\t<e:Image height=\"72\" width=\"72\" y=\"25\" source=\"{data.icon}\" x=\"229\" />\n</e:Skin>"
+    }
+  ]
+}

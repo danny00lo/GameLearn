@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="goodsListIRSkin" width="656" height="122" xmlns:e="http://ns.egret.com/eui">
+	<e:Image height="100%" width="100%" x="0" y="0" source="{data.hope}"/>
+	<e:Label fontFamily="微软雅黑" text="{data.goodsName}" x="326" y="0" size="30" width="160" textAlign="center"
+	         verticalAlign="middle" textColor="{data.realColor}" height="122" strokeColor="{data.color}" stroke="{data.size}" />
+	<e:Label fontFamily="微软雅黑" y="0" text="{data.comment}" textAlign="left" width="220" size="30" verticalAlign="middle"
+	         x="515" textColor="{data.realColor}" height="122" strokeColor="{data.color}" stroke="{data.size}" />
+	<e:Label fontFamily="微软雅黑" y="0" text="{data.rank}" width="220" size="30" x="95" textColor="{data.realColor}" height="122"
+	         textAlign="left" verticalAlign="middle" strokeColor="{data.color}" stroke="{data.size}" />
+	<e:Image height="72" width="72" y="25" source="{data.icon}" x="229" />
+</e:Skin>
